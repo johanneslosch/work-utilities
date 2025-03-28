@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work utilities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./stringify.js"></script>
+    <script src="./anonymize.js"></script>
+  </head>
+  <body>
+    <div
+      class="flex flex-col items-center justify-center min-h-screen bg-gray-100"
+    >
+      <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
+        <h1 class="text-2xl font-bold text-center mb-4">Work utilities</h1>
+        <p class="text-gray-700 text-center">
+          Welcome to the Work utilities page!
+        </p>
+      </div>
+
+      <div class="flex flex-row justify-around w-full mt-6">
+        <div class="max-w-md w-1/2 mt-6">
+          <!-- section to stringify objects -->
+          <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full mt-6">
+            <h2 class="text-xl font-semibold mb-4">Stringify Objects</h2>
+            <textarea
+              id="objectInput"
+              rows="4"
+              class="w-full p-2 border border-gray-300 rounded mb-4"
+              placeholder='{"key": "value"}'
+            ></textarea>
+            <button
+              id="stringifyButton"
+              class="bg-blue-500 text-white px-4 py-2 rounded"
+              onclick="getDataFromInput('stringify')"
+            >
+              Stringify
+            </button>
+            <pre id="objectOutput" class="mt-4 bg-gray-100 p-2 rounded"></pre>
+          </div>
+          <!-- section to parse strings -->
+          <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full mt-6">
+            <h2 class="text-xl font-semibold mb-4">Parse Strings</h2>
+            <textarea
+              id="stringInput"
+              rows="4"
+              class="w-full p-2 border border-gray-300 rounded mb-4"
+              placeholder='"{\"key\":\"value\"}"'
+            ></textarea>
+            <button
+              id="parseButton"
+              class="bg-blue-500 text-white px-4 py-2 rounded"
+              onclick="getDataFromInput('unstringify')"
+            >
+              Parse
+            </button>
+            <pre id="parsedOutput" class="mt-4 bg-gray-100 p-2 rounded"></pre>
+          </div>
+        </div>
+        <div class="max-w-md w-1/2 mt-6">
+          <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full mt-6">
+            <h2 class="text-xl font-semibold mb-4">Anonymize JSON Objects</h2>
+            <textarea
+              id="anonymizeInput"
+              rows="4"
+              class="w-full p-2 border border-gray-300 rounded mb-4"
+              placeholder='{"id": "2832f86f-8907-4c16-9abd-4f4e8ec9c4f1", "name": "John Doe", "email": "john@example.com"}'
+            ></textarea>
+            <button
+              id="anonymizeButton"
+              class="bg-blue-500 text-white px-4 py-2 rounded"
+              onclick="getDataFromInput('anonymize')"
+            >
+              Anonymize
+            </button>
+            <pre
+              id="anonymizedOutput"
+              class="mt-4 bg-gray-100 p-2 rounded"
+            ></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
