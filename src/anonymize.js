@@ -1,4 +1,4 @@
-function getDataFromInput(action) {
+export function getDataFromInput(action) {
   let result = "";
   switch (action) {
     case "anonymize":
@@ -35,8 +35,6 @@ function copyToClipboard(text) {
     })
     .catch((err) => console.error("Error copying to clipboard:", err));
 }
-
-module.exports = getDataFromInput;
 
 function replaceUUIDs(input) {
   const uuidRegex =

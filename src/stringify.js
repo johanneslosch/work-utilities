@@ -16,7 +16,7 @@ function unStringifyJson(jsonString) {
   }
 }
 
-function getDataFromInput(action) {
+export function getDataFromInput(action) {
   let result = "";
   switch (action) {
     case "stringify":
@@ -53,5 +53,3 @@ function copyToClipboard(text) {
     })
     .catch((err) => console.error("Error copying to clipboard:", err));
 }
-
-module.exports = getDataFromInput;

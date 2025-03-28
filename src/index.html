@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work utilities</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./stringify.js"></script>
-    <script src="./anonymize.js"></script>
+    <script type="module">
+      import { getDataFromInput } from "./stringify.js";
+      import { getDataFromInput as anonymizeDataFromInput } from "./anonymize.js";
+
+      // Attach functions to the global window object for inline event handlers
+      window.getDataFromInput = getDataFromInput;
+      window.anonymizeDataFromInput = anonymizeDataFromInput;
+    </script>
   </head>
   <body>
     <div
