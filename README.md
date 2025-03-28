@@ -10,34 +10,25 @@ Helper functions as a local webpage that support various tasks in my day-to-day 
 - Stringify JSON objects for better readability.
 - Parse JSON strings back into objects.
 - Anonymize UUIDs in JSON data.
-- No logging more than necessary; no data is stored.
+- Minimal logging with no data storage to ensure privacy.
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/johanneslosch/work-utilities.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd work-utilities
-   ```
-3. Install dependencies (if applicable):
-   ```bash
-   npm install
-   ```
+- Clone the repository:
+
+  ```bash
+  git clone https://github.com/johanneslosch/work-utilities.git
+  ```
+
+- Or run the docker container using
+  ```bash
+  docker run -p 80:80 ghcr.io/johanneslosch/work-utilities
+  ```
 
 ## Usage
 
-1. Start the local server:
-   ```bash
-   npm start
-   ```
-2. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
-3. Use the provided tools and utilities to assist with your tasks.
+- Open the `src/index.html` or start the docker container
+- Or in case of docker open `http://localhost`
 
 ## Contributing
 
