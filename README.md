@@ -1,3 +1,7 @@
+<div style="display: flex; justify-content: center; align-items: center">
+  <img src="src/logo.png" />
+</div>
+
 # work-utilities
 
 Helper functions as a local webpage that support various tasks in my day-to-day job.
